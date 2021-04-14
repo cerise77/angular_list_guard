@@ -1,0 +1,33 @@
+.main{
+    margin: 30px;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-column-gap: 25px;
+    }
+
+    &__list-item {
+        background-color: cadetblue;
+        border-bottom: 1px solid darkslategray;
+        cursor: pointer;
+    }
+
+    &__list-item:hover {
+        background-color: rgb(132, 200, 202);
+    }
+
+    &__birth {
+        display: none;
+    }
+}
+
+.profile {
+    background-color: darkkhaki;
+    padding: 20px;
+
+    div {
+        margin-bottom: 10px;
+    }
+}
+

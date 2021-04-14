@@ -1,0 +1,16 @@
+<div class="main">
+    <form [formGroup]="myForm" novalidate class="main__grid">
+        <div class="form-group">
+            <input class="form-control" name="name" formControlName="Name" placeholder="Name" [(ngModel)]="queryS" />
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="birth" formControlName="Birth" placeholder="Birth" [(ngModel)]="query"  />
+        </div>
+    </form>
+    <mat-list role="list" class="main__list-item" *ngFor="let table of tables | searchS:'name':queryS | search:'birth':query">
+        <mat-list-item role="listitem" (click)="goProfile(table)">
+            <span>{{table?.name}}</span>
+            <span  class="main__birth">{{table?.birth}}</span>
+              </mat-list-item>
+    </mat-list>
+  </div>
